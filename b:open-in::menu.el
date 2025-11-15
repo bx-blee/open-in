@@ -63,15 +63,21 @@ As such what happens below should be exactly what is necessary and no more."
 
     (easy-menu-add-item
      b:open-in:menu nil
-     (b:open-in:menuItem:vscode|define)
+     (b:open-in:menuItem:transient|define)
        (s-- 3))
+
+    (easy-menu-add-item
+     b:open-in:menu nil
+     (b:open-in:menuItem:vscode|define)
+       (s-- 4))
+
 
    (dolist (item '(b:open-in:menuItem:terminal|define
                    ))
       (easy-menu-add-item
        b:open-in:menu nil
        (funcall item)
-       (s-- 4)))
+       (s-- 5)))
 
    (dolist (item '(b:open-in:menuItem:external-app|define
                    b:open-in:menuItem:show-in-desktop|define
@@ -79,7 +85,7 @@ As such what happens below should be exactly what is necessary and no more."
       (easy-menu-add-item
        b:open-in:menu nil
        (funcall item)
-       (s-- 5)))
+       (s-- 6)))
 
    (easy-menu-add-item
     b:open-in:menu nil
@@ -92,6 +98,14 @@ As such what happens below should be exactly what is necessary and no more."
 
     'b:open-in:menu
     ))
+
+(defun b:open-in:menuItem:transient|define ()
+  (car `(
+    [,(format "Transient Menu")
+     (call-interactively 'b:open-in/transient)
+     :help "Transient Menu."
+     ]
+    )))
 
 (defun b:open-in:menuItem:vscode|define ()
   (car `(

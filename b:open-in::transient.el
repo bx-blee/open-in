@@ -5,24 +5,14 @@
 (require 'xah-open-in)
 (require 'b:open-in::alias)
 
-;; (transient-define-prefix git-timemachine-help ()
-;;  "Show online help."
-;;  ["Navigate"
-;;   [("p" "show previous revision" git-timemachine-show-previous-revision)
-;;    ("n" "show next revision" git-timemachine-show-next-revision)
-;;    ("g" "show nth revision" git-timemachine-show-nth-revision)
-;;    ("h" "show nearest revision" git-timemachine-show-nearest-revision)
-;;    ("t" "show fuzzy revision" git-timemachine-show-revision-fuzzy)
-;;    ("i" "show revision introducing" git-timemachine-show-revision-introducing)]]
-;;  ["Kill current revision"
-;;   [("w" "kill abbreviated revision" git-timemachine-kill-abbreviated-revision)
-;;    ("W" "kill revision" git-timemachine-kill-revision)]]
-;;  ["Misc"
-;;   [("b" "blame current revision" git-timemachine-blame)
-;;    ("c" "show commit" git-timemachine-show-commit)
-;;    ("?" "show help" git-timemachine-help)
-;;    ("q" "quit" git-timemachine-quit)]])
-
+(transient-define-prefix b:open-in/transient ()
+  "Open-In menu."
+  ["Editor & Terminal"
+   [("v" "open in vscode" b:open-in/vscode)
+    ("t" "open in terminal" b:open-in/terminal)]]
+  ["External & Desktop"
+   [("e" "open in external app" b:open-in/external-app)
+    ("d" "show in desktop" b:open-in/show-in-desktop)]])
 
 
 (provide 'b:open-in::transient)
