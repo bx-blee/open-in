@@ -2,6 +2,7 @@
 ;;;
 ;;;
 
+(require 'transient)
 (require 'xah-open-in)
 (require 'b:open-in::alias)
 

@@ -90,9 +90,9 @@ As such what happens below should be exactly what is necessary and no more."
    (easy-menu-add-item
     b:open-in:menu nil
     (b:menu:panelAndHelp|define
-      :panelName "/bisos/panels/blee-core/AI/gptel/_nodeBase_"
+      :panelName "/bisos/panels/blee-core/blee-pkgs/open-in/_nodeBase_"
       :funcName $thisFuncName
-      :pkgRepoUrl "https://github.com/karthink/gptel"
+      :pkgRepoUrl "https://github.com/bx-blee/open-in"
       )
      (s-- 8))
 
