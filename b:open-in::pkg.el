@@ -5,6 +5,7 @@
 (require 'b:open-in::alias)
 (require 'b:open-in::menu)
 (require 'b:open-in::transient)
+(require 'b:open-in::kbd)
 
 (defgroup b:open-in:: nil
   "Open-In Package."
