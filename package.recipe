@@ -1,0 +1,4 @@
+(open-in
+  :fetcher github
+  :repo "bx-blee/open-in"
+  :files ("*.el"))
